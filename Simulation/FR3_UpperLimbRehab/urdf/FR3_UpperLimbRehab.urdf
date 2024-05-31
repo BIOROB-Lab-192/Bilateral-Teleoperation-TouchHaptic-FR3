@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="FR3_UpperLimbRehab">
+  <link
+    name="FR3_Base_Link">
+    <inertial>
+      <origin
+        xyz="0.041018 -0.00014 0.049974"
+        rpy="0 0 0" />
+      <mass
+        value="0.62977" />
+      <inertia
+        ixx="0.00315"
+        ixy="8.2904E-07"
+        ixz="0.00015"
+        iyy="0.00388"
+        iyz="8.2299E-06"
+        izz="0.004285" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Base_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Base_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FR3_Link_1">
+    <inertial>
+      <origin
+        xyz="0.003875 0.002081 -0.04762"
+        rpy="0 0 0" />
+      <mass
+        value="4.970684" />
+      <inertia
+        ixx="0.70337"
+        ixy="-0.00013900"
+        ixz="0.0067720"
+        iyy="0.70661"
+        iyz="0.019169"
+        izz="0.0091170" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RevoluteJoint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.333"
+      rpy="0 0 0" />
+    <parent
+      link="FR3_Base_Link" />
+    <child
+      link="FR3_Link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.7437"
+      upper="2.7437"
+      effort="87"
+      velocity="2.62" />
+  </joint>
+  <link
+    name="FR3_Link_2">
+    <inertial>
+      <origin
+        xyz="-0.003141 -0.02872 0.003495"
+        rpy="0 0 0" />
+      <mass
+        value="0.646926" />
+      <inertia
+        ixx="0.0079620"
+        ixy="-3.9250E-03"
+        ixz="1.0254E-02"
+        iyy="2.8110E-02"
+        iyz="7.04E-04"
+        izz="2.5995E-02" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RevoluteJoint_2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="FR3_Link_1" />
+    <child
+      link="FR3_Link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.7837"
+      upper="1.7837"
+      effort="87"
+      velocity="2.62" />
+  </joint>
+  <link
+    name="FR3_Link_3">
+    <inertial>
+      <origin
+        xyz="2.7518E-02 3.9252E-02 -6.6502E-02"
+        rpy="0 0 0" />
+      <mass
+        value="3.228604" />
+      <inertia
+        ixx="3.7242E-02"
+        ixy="-4.7610E-03"
+        ixz="-1.1396E-02"
+        iyy="3.6155E-02"
+        iyz="-1.2805E-02"
+        izz="1.0830E-02" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RevoluteJoint_3"
+    type="revolute">
+    <origin
+      xyz="0 -0.316 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="FR3_Link_2" />
+    <child
+      link="FR3_Link_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.9007"
+      upper="2.9007"
+      effort="87"
+      velocity="2.62" />
+  </joint>
+  <link
+    name="FR3_Link_4">
+    <inertial>
+      <origin
+        xyz="-5.317E-02 1.04419E-01 2.7454E-02"
+        rpy="0 0 0" />
+      <mass
+        value="3.587895" />
+      <inertia
+        ixx="2.5853E-02"
+        ixy="7.7960E-03"
+        ixz="-1.3320E-03"
+        iyy="1.9552E-02"
+        iyz="8.6410E-03"
+        izz="2.8323E-02" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RevoluteJoint_4"
+    type="revolute">
+    <origin
+      xyz="0.0825 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="FR3_Link_3" />
+    <child
+      link="FR3_Link_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0421"
+      upper="-0.1518"
+      effort="87"
+      velocity="2.62" />
+  </joint>
+  <link
+    name="FR3_Link_5">
+    <inertial>
+      <origin
+        xyz="-1.1953E-02 4.1065E-02 -3.8437E-02"
+        rpy="0 0 0" />
+      <mass
+        value="1.225946" />
+      <inertia
+        ixx="3.5549E-02"
+        ixy="-2.1170E-03"
+        ixz="-4.0370E-03"
+        iyy="2.9474E-02"
+        iyz="2.2900E-04"
+        izz="8.6270E-03" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RevoluteJoint_5"
+    type="revolute">
+    <origin
+      xyz="-0.0825 0.384 0.000"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="FR3_Link_4" />
+    <child
+      link="FR3_Link_5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8065"
+      upper="2.8065"
+      effort="12"
+      velocity="5.26" />
+  </joint>
+  <link
+    name="FR3_Link_6">
+    <inertial>
+      <origin
+        xyz="6.0149E-02 -1.4117E-02 -1.0517E-02"
+        rpy="0 0 0" />
+      <mass
+        value="1.666555" />
+      <inertia
+        ixx="1.9640E-03"
+        ixy="1.0900E-04"
+        ixz="-1.1580E-03"
+        iyy="4.3540E-03"
+        iyz="3.4100E-04"
+        izz="5.4330E-03" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RevoluteJoint_6"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="FR3_Link_5" />
+    <child
+      link="FR3_Link_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0.5445"
+      upper="4.5169"
+      effort="12"
+      velocity="4.18" />
+  </joint>
+  <link
+    name="FR3_Link_7">
+    <inertial>
+      <origin
+        xyz="1.0517E-02 -4.252E-03 6.1597E-02"
+        rpy="0 0 0" />
+      <mass
+        value="0.735522" />
+      <inertia
+        ixx="1.2516e-02"
+        ixy="-4.2800e-04"
+        ixz="-1.1960e-03"
+        iyy="1.0027e-02"
+        iyz="-7.4100e-04"
+        izz="4.8150e-03" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/FR3_Link_7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RevoluteJoint_7"
+    type="revolute">
+    <origin
+      xyz="0.088 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="FR3_Link_6" />
+    <child
+      link="FR3_Link_7" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0159"
+      upper="3.0159"
+      effort="12"
+      velocity="5.26" />
+  </joint>
+  <link
+    name="UpperLimbRehab_EndEffector">
+    <inertial>
+      <origin
+        xyz="0.03149 0 0.0616"
+        rpy="0 0 0" />
+      <mass
+        value="0.425" />
+      <inertia
+        ixx="5.365E-04"
+        ixy="1.357E-04"
+        ixz="0.001E-04"
+        iyy="16.854E-04"
+        iyz="0"
+        izz="16.993E-04" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/UpperLimbRehab_EndEffector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FR3_UpperLimbRehab/meshes/UpperLimbRehab_EndEffector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Fixed"
+    type="fixed">
+    <origin
+      xyz="0 0 0.107"
+      rpy="0 0 2.35619" />
+    <parent
+      link="FR3_Link_7" />
+    <child
+      link="UpperLimbRehab_EndEffector" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

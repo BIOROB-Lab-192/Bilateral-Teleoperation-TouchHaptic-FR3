@@ -1,0 +1,41 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww16600\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 README\
+\
+Purpose: The purpose of this repository is to document all the work completed by Angelo-Jose Banzon during the Fall 2023 and Spring 2024 SJSU ME295 senior project. The project was to develop a bilateral impedance controller using a Franka Research 3 as the follower robot.\
+\
+File Organization Notes:\
+1. CAD Models : This folder contains the a SOLIDWORKS assembly and STEP file of the upper limb end effector. All piece parts are internal to the assembly file.\
+\
+2. Data Collection: This folder contains all the data collected throughout the project.\
+	12062023_Robot_State: The purpose of this testing was to record the torque of the Franka Research 3 using MATLAB during a point-to-point trajectory. This method was chosen because I was unable to collect FR3 data from the RobotState Structure during a continuous trajectory.\
+	04272024PnP_Rectangle: The pick-and-place exercise designed in DESK was a rectangle. FR3 robot joint angles, joint torques, and end effector wrench forces and torques were collected.\
+	05022024_RobotGearRatio: The gear ratio collected through OPC UA is not consistent with the RobotStateStruct (MATLAB) or the (Simscape Multibody Simulation). An attempt was made to estimate the gear ratio of the robot by collect the static joint torque in MATLAB and through OPC UA. The average torque value for each set of data was found and the resulting gear ratio would be the (OPC UA torque / MATLAB torque).\
+	05112024_PnP_Attempt2_Used4ASMEPaper: In this data set, an elliptical trajectory was designed using FRANKA MATLAB. OPC UA was used to collect the robot data. the robot data from OPC was used to simulate the Impedance controller for the FR3 in MATLAB.\
+	05122024Gear Ratio Estimation Attempt 2: In this folder, the joint angle, joint torque, and end effector wrench forces and torques were collected through OPC UA at 3 different robot poses. The torque data was also recorded using the RobotState Structure in MATLAB. The resulting gear ratio was inconsistent between all 3 robot poses.\
+\
+3. Derivations: This folder contains all the derivations completed during the project. This includes the Forward Kinematics, Jacobian, and joint space mapping for the FR3 and the Touch Haptic device (Phantom Omni)\
+4. Python Codes: This folder contains the main python code used to collect the FR3 data using OPC UA.\
+5. Simulation:\
+	1.Controllers\
+		1A. Bilateral Impedance Control: Impedance controller for the FR3 using the data collected from 05112024_PnP_Attempt2.\
+		1B. Computed Torque Controller: This controller uses feedback linearization for a position error-based control of the FR3 (with Franka Hand)\
+	2. Parameter Estimation\
+		2A. Estimated Dynamic Parameter Estimation\
+	3. Bilateral Control Setup\
+		3A. FR3_ManualControl_Sliders: The joint position of a FR3 in Simscape Multibody can be adjusted using sliders.\
+		3B. Unilateral Control: This folder contains all the attempts to establish connection between the Touch Haptic device (physical robot) in \
+		       QUARC with a Simscape Multibody model of the FR3 (standard configuration).\
+	4. URDF\
+		4A. FR3_UpperLimbRehab: URDF folder for FR3 with the upper limb end effector installed\
+		4B. franka_description: URDF folder for the FR3 with the Franka Hand (standard configuration)\
+	5. RigidBodyTree\
+		5A. FR3_robot : This MATLAB code creates the rigidbodyTree for the FR3 (standard config) to use with the Robotic Systems toolbox function blocks. It uses the URDF from the \'93franka_description\'94 folder\'94.\
+		5B. FR3_ULRehab_robot: This MATLAB code creates the rigidbodyTree for the FR3 with the upper limb end effector. This uses the FR3_UpperlimbRehab URDF folder\
+	6. Functions: This folder contains functions created for use in the Simulations. \
+	}
